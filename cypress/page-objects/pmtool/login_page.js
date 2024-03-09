@@ -25,7 +25,8 @@ export class LoginPage {
     cy.get(this.loginButton).click();
     return new HomePage();
   }
-    clickLostPassword() {
+  clickLostPassword() {
     cy.get(this.forgottenPasswordButton).click();
     return new LostPasswordPage();
+  }
 }
