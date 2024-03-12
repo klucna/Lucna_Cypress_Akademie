@@ -1,11 +1,29 @@
-import { LoginPage } from "../../page-objects/sauce-demo/login_page"
+import { LoginPage } from "../../page-objects/sauce-demo/login_page";
 
-describe(Login and Logout Tests), () => {
-it ("Login Test", () => {
-new LoginPage()
-.openSauceDemo()
-.typeUsername("standard_user")
-.typePassword("secret_sauce")
-.clickButton();
-})
-}
+describe("Sauce Demo Login Tests", () => {
+  it("Login Test", () => {
+    new LoginPage()
+      .openSauceDemo()
+      .typeUsername("standard_user")
+      .typePassword("secret_sauce")
+      .clickLogin();
+  });
+  it("Login and Logout Test", () => {
+    new LoginPage()
+      .openSauceDemo()
+      .typeUsername("standard_user")
+      .typePassword("secret_sauce")
+      .clickLogin()
+      .clickMenu()
+      .clickLogout();
+  });
+  it.only("Add item to Shopping Cart", () => {
+    new LoginPage()
+      .openSauceDemo()
+      .typeUsername("standard_user")
+      .typePassword("secret_sauce")
+      .clickLogin()
+      .clickAddBackpackToCart()
+      .clickShoppingCart();
+  });
+});
