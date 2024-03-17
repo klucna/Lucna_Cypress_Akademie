@@ -29,3 +29,4 @@ export class LoginPage {
     cy.get(this.forgottenPasswordButton).click();
     return new LostPasswordPage();
 }
+}
