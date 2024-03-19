@@ -9,7 +9,7 @@ describe("Open eshop and Fill in Registration Form", () => {
     homePage.clickRegisterButton();
   });
 
-  it.only("Fill in Registration Details", () => {
+  it("Fill in Registration Details", () => {
     const homePage = new HomePage();
     const registration = new Registration();
     homePage.openEshop();

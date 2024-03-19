@@ -9,6 +9,7 @@ export class HomePage {
     cy.visit(this.esopURL);
     return this;
   }
+  
   clickMyAccountButton() {
     cy.get(this.myAccountButton).click();
     return this;

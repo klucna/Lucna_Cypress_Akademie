@@ -8,10 +8,12 @@ export class Registration {
     this.passwordConfirm = "#input-confirm";
     this.continueButton = ".pull-right > .btn";
   }
+
   typeFirstName(firstname) {
     cy.get(this.firstName).type(firstname);
     return this;
   }
+
   typeLastName(lastname) {
     cy.get(this.lastName).type(lastname);
     return this;
