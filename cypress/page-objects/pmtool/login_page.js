@@ -30,3 +30,4 @@ export class LoginPage {
     return new LostPasswordPage();
   }
 }
+}
