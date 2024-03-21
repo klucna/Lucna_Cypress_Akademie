@@ -11,6 +11,12 @@ export class LoginPage {
     this.pageHeader = "h3.form-title";
     this.logoImg = ".login-page-logo img";
     this.rememberMeCheckbox = ".checkbox";
+    this.alertDiv = "div.alert";
+  }
+
+  alertNotExist() {
+    cy.get(this.alertDiv).should("not.exist");
+    return this;
   }
 
   usernameHavePlacelhoder(placeholderValue) {
