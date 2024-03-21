@@ -1,19 +1,13 @@
+import { HeaderSection } from "./common/header_section";
 import { LoginPage } from "./login_page";
+import { ProjectPage } from "./projects_page";
 
-export class HomePage {
+export class HomePage extends HeaderSection {
   constructor() {
-    this.profileButton = "#user_dropdown > .dropdown-toggle";
-    this.logoutButton = "#logout > a";
+    super();
     this.welcomePageHeader = "#welcome-page-header";
     cy.get(this.welcomePageHeader).should("be.visible");
   }
 
-  clickProfile() {
-    cy.get(this.profileButton).click();
-    return this;
-  }
-  clickLogout() {
-    cy.get(this.logoutButton).click();
-    return new LoginPage();
-  }
+  //v HomePage jsme po úpravě header_section a menu_section odmazali metodu a jeden this.//
 }
