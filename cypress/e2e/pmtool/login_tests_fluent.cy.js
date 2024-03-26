@@ -6,9 +6,11 @@ describe("Fluent Login tests", () => {
   });
 
   it("Login to pmtool using Fluent API test", () => {
+    const username = Cypress.env("pmtool_username");
+    const password = Cypress.env("pmtool_password"); //ze souboru cypress.env.json, kde jsou hesla//
     new LoginPage()
-      .typeUsername("cypress_zima_2024")
-      .typePassword("Zima2024Cypress")
+      .typeUsername(username)
+      .typePassword(password)
       .clickLogin()
       .clickProfile()
       .clickLogout();
