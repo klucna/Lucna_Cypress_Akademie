@@ -22,7 +22,7 @@ describe("Login, Add a New Project and Logout Tests", () => {
     homePage.clickLogout();
   });
 
-  it.only("Login, Add a New Project and Logout Test", () => {
+  it("Login, Add a New Project and Logout Test", () => {
     const loginPage = new LoginPage();
     const addProject = new AddProject();
     const homePage = new HomePage();
