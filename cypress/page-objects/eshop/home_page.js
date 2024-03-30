@@ -1,3 +1,5 @@
+import { Registration } from "./registration_page";
+
 export class HomePage {
   constructor() {
     this.eshopURL = "https://tredgate.com/eshop/";
@@ -17,6 +19,6 @@ export class HomePage {
 
   clickRegisterButton() {
     cy.get(this.registerButton).click();
-    return this;
+    return new Registration();
   }
 }
