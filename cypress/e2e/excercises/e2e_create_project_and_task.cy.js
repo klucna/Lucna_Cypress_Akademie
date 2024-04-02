@@ -38,6 +38,13 @@ describe("Create new Project and Task E2E Test", () => {
       .selectStatus("Open")
       .selectType("Change")
       .assignTask("Petr Fifka")
-      .clickSave();
+      .clickSave()
+      .clickProjectInfo()
+      .projectTitleHasTexe(projectName)
+      .createdByHasText("Cypress Zima 2024")
+      .dateAddedHasText("02/04/2024")
+      .projectHavePriority("High")
+      .projectHaveStatus("Open")
+      .projectHaveStartDate("28/03/2024");
   });
 });
