@@ -28,6 +28,16 @@ export class LoginPage {
     return this;
   }
 
+  usernameIsVisible() {
+    cy.get(this.usernameInput).should("be.visible");
+    return this;
+  }
+
+  usernameHaveValue(username) {
+    cy.get(this.usernameInput).should("have.value", username);
+    return this;
+  }
+
   rememberMeHaveText(text) {
     cy.get(this.rememberMeCheckbox).should("contain.text", text);
     return this;
@@ -45,6 +55,11 @@ export class LoginPage {
 
   logoIsVisible() {
     cy.get(this.logoImg).should("be.visible");
+    return this;
+  }
+
+  passwordIsVisible(){
+    cy.get(this.passwordInput).should("be.visible");
     return this;
   }
 
