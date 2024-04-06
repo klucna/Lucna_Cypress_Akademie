@@ -5,7 +5,7 @@ import { LoginPage } from "../../../page-objects/automationteststore/login_page"
 import { faker } from "@faker-js/faker";
 
 describe("Create Account in Automationteststore.com E2E Test", () => {
-  before(() => {
+  beforeEach(() => {
     new HomePage().openAutomationTestStore().clickLoginOrRegisterButton();
     new LoginPage().clickContinueButton();
   });
