@@ -8,7 +8,7 @@ describe("Users page atomic tests", () => {
       .typeUsername(Cypress.env("pmtool_username"))
       .typePassword(Cypress.env("pmtool_password"))
       .clickLogin();
-    new UsersPage().visit();
+    new UsersPage().visit(); //využíváme basepage visit pro přímé otevření//
   });
 
   context("Title tests", () => {
