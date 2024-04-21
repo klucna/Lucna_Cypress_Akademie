@@ -1,0 +1,20 @@
+[
+  {
+    "access_group": "Manager",
+    "username_prefix": "user_",
+    "description": "New User as Manager",
+    "password": "bezpecneheslomanager"
+  },
+  {
+    "access_group": "Developer",
+    "username_prefix": "user_",
+    "description": "New User as Developer",
+    "password": "bezpecneheslodeveloper"
+  },
+  {
+    "access_group": "Client",
+    "username_prefix": "user_",
+    "description": "New User as Client",
+    "password": "bezpecnehesloclient"
+  }
+]
